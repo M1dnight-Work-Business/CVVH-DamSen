@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
+@import "react-slideshow-image/dist/styles.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fontBanger {
+    font-family: "Bangers", sans-serif;
+}
+
+.fontNunito {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.fontNunito-bold{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
