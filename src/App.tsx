@@ -2,9 +2,9 @@ import MainLayout from "./layouts/MainLayout.tsx";
 import "./index.css";
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
 import TrangChu from "./pages/TrangChu.tsx";
-import KhamPha from "./pages/KhamPha.tsx";
+import KhamPha from "./pages/KhamPhaPages/KhamPha.tsx";
 import GioiThieu from "./pages/GioiThieuPages/GioiThieu.tsx";
-import SuKien from "./pages/SuKien.tsx";
+import SuKien from "./pages/SuKienPages/SuKien.tsx";
 import GioiThieuLichSuHinhThanh from "./pages/GioiThieuPages/GioiThieu-LichSuHinhThanh.tsx";
 import GioiThieuChinhSachBaoMat from "./pages/GioiThieuPages/GioiThieu-ChinhSachBaoMat.tsx";
 import GiaVeTapThe from "./pages/GiaVePages/GiaVe-VeTapThe.tsx";
@@ -12,6 +12,9 @@ import GioiThieuThanhVien from "./pages/GioiThieuPages/GioiThieu-ThanhVien.tsx";
 import GiaVeTrongCongVien from "./pages/GiaVePages/GiaVe-TrongCongVien.tsx";
 import GiaVeDichVu from "./pages/GiaVePages/GiaVe-VeDichVu.tsx";
 import GiaVeTapTheDuc from "./pages/GiaVePages/GiaVe-VeTapTheDuc.tsx";
+import KhamPhaKhiDuoiDai from "./pages/KhamPhaPages/KhamPha-KhiDuoiDai.tsx";
+import SuKienWaterShow from "./pages/SuKienPages/SuKien-WaterShow.tsx";
+import GDTN_ThucVat from "./pages/KhamPhaPages/GDTN-ThucVat.tsx";
 
 function App() {
     const router = createBrowserRouter(
@@ -19,6 +22,8 @@ function App() {
             <Route path='/' element={<MainLayout/>}>
                 <Route path='/trang-chu' element={<TrangChu/>}/>)
                 <Route path='/kham-pha' element={<KhamPha/>}/>)
+                <Route path='/kham-pha-khi-duoi-dai' element={<KhamPhaKhiDuoiDai/>}/>)
+                <Route path='/gdtn-thuc-vat' element={<GDTN_ThucVat/>}/>)
                 <Route path='/gioi-thieu' element={<GioiThieu/>}/>)
                 <Route path='/gioi-thieu-lich-su-hinh-thanh' element={<GioiThieuLichSuHinhThanh/>}/>)
                 <Route path='/gioi-thieu-thanh-vien' element={<GioiThieuThanhVien/>}/>)
@@ -28,6 +33,7 @@ function App() {
                 <Route path='/gia-ve-tap-the' element={<GiaVeTapThe/>}/>)
                 <Route path='/gia-ve-tap-the-duc' element={<GiaVeTapTheDuc/>}/>)
                 <Route path='/su-kien' element={<SuKien/>}/>)
+                <Route path='/su-kien-water-show' element={<SuKienWaterShow/>}/>)
             </Route>
         )
     );
