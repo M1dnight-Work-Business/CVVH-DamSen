@@ -24,7 +24,7 @@ function GiaVeDichVu() {
         <section>
             <div className="bg-[#ECF3E0] justify-center items-start p-6">
                 <div className="bg-white p-6 justify-center">
-                    <img className=" w-full " src="src/assets/dich-vu.png" alt=""/>
+                    <img className=" w-full " src="src/assets/png/dich-vu.png" alt=""/>
                     <div className="text-left pt-[56px]">
                         <h1 className="fontBanger text-[96px] text-[#259E58] underline uppercase gap-2">
                             vé dịch vụ
@@ -50,7 +50,7 @@ function GiaVeDichVu() {
                             </h2>
                         </div>
                         <div className="flex">
-                            <img src="src/assets/exclaimation.svg" alt=""/>
+                            <img src="src/assets/svg/exclaimation.svg" alt=""/>
                             <p className="pl-2 fontNunito-bold text-[18px] text-[#DFA100]">Lưu ý: Không áp dụng Vé trọn
                                 gói Đầm sen!</p>
                         </div>
@@ -90,7 +90,7 @@ function GiaVeDichVu() {
                         </h2>
                     </div>
                     <div className="flex">
-                        <img src="src/assets/exclaimation.svg" alt=""/>
+                        <img src="src/assets/svg/exclaimation.svg" alt=""/>
                         <p className="pl-2 fontNunito-bold text-[18px] text-[#DFA100]">Lưu ý: Tiền thế chân từ 300.000
                             đồng đến 500.000 đồng + CMND</p>
                     </div>

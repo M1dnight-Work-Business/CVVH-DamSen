@@ -4,11 +4,16 @@ function GioiThieu() {
         ul: "text-left pl-6 fontNunito-bold text-gray-500 text-[16px] -ml-1 leading-[27px] list-disc",
         span: "fontNunito text-gray-400",
     }
+    const listhoatdong = [
+        "Baby",
+        "Girl",
+    ]
+    
     return (
         <section>
             <div className="bg-[#ECF3E0] justify-center p-6">
                 <div className="bg-white p-6 justify-center">
-                    <img src="src/assets/TrangChu.png" alt=""/>
+                    <img src="src/assets/png/TrangChu.png" alt=""/>
                     <p className="text-center text-[#666666] text-[16px] fontNunito pt-2">
                         Công viên Văn Hóa Đầm Sen với hơn 30 trò
                         chơi, địa điểm check in và nhiều loại thú quý hiếm
@@ -37,7 +42,7 @@ function GioiThieu() {
                                 </p>
                             </div>
                             <div className="absolute top-[75px] -right-44">
-                                <img className="object-cover h-[500px] w-[346px] " src="src/assets/TrangChu.png"
+                                <img className="object-cover h-[500px] w-[346px] " src="src/assets/png/TrangChu.png"
                                      alt=""/>
                             </div>
                             <div className="fontNunito-bold absolute bg-white ml-[150px] w-[140px] h-[40px]
@@ -71,7 +76,7 @@ function GioiThieu() {
                                 </p>
                             </div>
                             <div className="absolute top-[75px] -left-40">
-                                <img className="object-cover h-[500px] w-[346px] " src="src/assets/monkey_3.png"
+                                <img className="object-cover h-[500px] w-[346px] " src="src/assets/png/monkey_3.png"
                                      alt=""/>
                             </div>
                             <div className="fontNunito-bold absolute bg-white ml-[350px] w-[140px] h-[40px]
@@ -100,7 +105,7 @@ function GioiThieu() {
                                 </p>
                             </div>
                             <div className="absolute top-[75px] -right-44">
-                                <img className="object-cover h-[500px] w-[346px] " src="src/assets/cau-cuu-khuc-2.png"
+                                <img className="object-cover h-[500px] w-[346px] " src="src/assets/png/cau-cuu-khuc-2.png"
                                      alt=""/>
                             </div>
                             <div className="fontNunito-bold absolute bg-white ml-[150px] w-[140px] h-[40px]
@@ -133,7 +138,7 @@ function GioiThieu() {
                                 </p>
                             </div>
                             <div className="absolute top-[75px] -left-40">
-                                <img className="object-cover h-[500px] w-[346px] " src="src/assets/cafe-vuon-da.png"
+                                <img className="object-cover h-[500px] w-[346px] " src="src/assets/png/cafe-vuon-da.png"
                                      alt=""/>
                             </div>
                             <div className="fontNunito-bold absolute bg-white ml-[350px] w-[140px] h-[40px]
@@ -148,6 +153,83 @@ function GioiThieu() {
                     <p className="text-right pr-52 text-[#666666] text-[16px] fontNunito pt-2">
                         Vượn đen má vàng tại Công viên Văn hóa Đầm Sen.
                     </p>
+
+                    <div className="fontBanger pt-28 pb-6 text-[40px] text-pink-500 uppercase gap-2 text-center">
+                        <h2>
+                            Thời gian hoạt động
+                        </h2>
+                    </div>
+                    <div className="flex flex-row gap-6 ">
+                        <div className="w-[335px] h-[316px] shadow-lg grid place-items-center">
+                            <img src="src/assets/svg/ngay-mo-cua.svg" alt=""/>
+                            <img className="-mt-[60px]" src="src/assets/svg/line.svg" alt=""/>
+                            <h1 className="text-[30px] text-[#259E58] fontNunito-semibold uppercase -mt-[80px]">
+                                Ngày mở cửa
+                            </h1>
+                            <p className="text-center text-gray-600 fontNunito text-[20px] -mt-[80px]">
+                                Tất cả các ngày
+                                <br/>
+                                (trừ thứ 3)
+                            </p>
+                        </div>
+                        <div className="w-[335px] h-[316px] shadow-lg grid place-items-center">
+                            <img src="src/assets/svg/gio-ban-ve.svg" alt=""/>
+                            <img className="-mt-[60px]" src="src/assets/svg/line.svg" alt=""/>
+                            <h1 className="text-[30px] text-[#259E58] fontNunito-semibold uppercase -mt-[80px]">
+                                giờ bán vé
+                            </h1>
+                            <p className="text-center text-gray-600 fontNunito text-[20px] -mt-[80px]">
+                                Ngày thường: <span className=" font-extrabold text-gray-500">7h30 - 16h00</span>
+                                <br/>
+                                Cuối tuần + Lễ: <span className=" font-extrabold text-gray-500">7h30 - 19h00</span>
+                            </p>
+                        </div>
+                        <div className="w-[335px] h-[316px] shadow-lg grid place-items-center">
+                            <img src="src/assets/svg/ngay-mo-cua.svg" alt=""/>
+                            <img className="-mt-[60px]" src="src/assets/svg/line.svg" alt=""/>
+                            <h1 className="text-[30px] text-[#259E58] fontNunito-semibold uppercase -mt-[80px]">
+                                giờ hoạt động
+                            </h1>
+                            <p className="text-center text-gray-600 fontNunito text-[20px] -mt-[80px]">
+                                Ngày thường: <span className=" font-extrabold text-gray-500">8h00 - 18h00</span>
+                                <br/>
+                                Cuối tuần + Lễ: <span className=" font-extrabold text-gray-500">7h30 - 21h00</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="fontBanger pt-28 pb-6 text-[40px] text-pink-500 uppercase gap-2 text-center">
+                        <h2>
+                            Giá vé
+                        </h2>
+                    </div>
+                    
+                    
+                    
+                    <ul>
+                        {listhoatdong.map((item, key ) =>  {
+                            return (
+                                <li>
+                                    <div className="flex w-fit">
+                                        <div
+                                            className="rounded-full h-24 w-24 flex items-center justify-center bg-green-800">
+                                            <h2>
+                                                {key +1}
+                                            </h2>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                {item}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            )
+                            }
+                        )}
+
+                    </ul>
+
+
                     <div className="pt-12">
                         <h2 className="text-[23px] text-[#EC008C] uppercase fontNunito-semibold">Ghi chú:</h2>
                         <ul className={classNameTailwind?.ul}>
@@ -156,7 +238,7 @@ function GioiThieu() {
                                 className={classNameTailwind?.span}>8 giờ 00 - 17 giờ 30</span>
                             </li>
                             <li>
-                                Vé mua từ cổng: <span className={classNameTailwind?.span}>
+                            Vé mua từ cổng: <span className={classNameTailwind?.span}>
                                                         là vé được bán tại 2 cổng chính số 1A Lạc Long Quân 
                                                         (hoặc số 3 Hòa Bình), cổng số 2 (nhà hàng Thủy Tạ).
                                                     </span>

@@ -10,7 +10,7 @@ function SuKienWaterShow() {
         <section>
             <div className="bg-[#ECF3E0] justify-center p-6 underline-offset-auto">
                 <div className="bg-white p-6 justify-center">
-                    <img className="w-screen" src="src/assets/water-show.png" alt=""/>
+                    <img className="w-screen" src="src/assets/png/water-show.png" alt=""/>
                     <div className="h-auto text-left pt-[56px] float">
                         <h1 className="fontBanger text-[76px] text-[#259E58] underline uppercase gap-2 w-auto">
                             nhạc nước đầm sen
@@ -19,9 +19,9 @@ function SuKienWaterShow() {
                         </h1>
                         <div className="flex-shrink-0 relative justify-between">
                             <div className="flex text-[#EC008C] text-[16px] jus fontNunito-semibold">
-                                <img className="mr-1" src="src/assets/tag.svg" alt=""/>
+                                <img className="mr-1" src="src/assets/svg/tag.svg" alt=""/>
                                 <span>Sắp diễn ra</span>
-                                <img className="ml-4" src="src/assets/time.svg" alt=""/>
+                                <img className="ml-4" src="src/assets/svg/time.svg" alt=""/>
                                 <span className="text-gray-500 pl-1">11/02/2020</span>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ function SuKienWaterShow() {
                         </p>
                     </div>
                     <div className="pt-10 text-center">
-                        <img className="w-full pb-3" src="src/assets/water-show-2.png" alt=""/>
+                        <img className="w-full pb-3" src="src/assets/png/water-show-2.png" alt=""/>
                         <p className="fontNunito text-gray-500 text-[16px]">Ảnh minh họa dự án Đầm Sen Water Show</p>
                     </div>
                     <div className="pt-10 w-[951px]">
@@ -61,7 +61,7 @@ function SuKienWaterShow() {
                         </p>
                     </div>
                     <div className="pt-10 text-center">
-                        <img className="w-full pb-3" src="src/assets/water-show-3.png" alt=""/>
+                        <img className="w-full pb-3" src="src/assets/png/water-show-3.png" alt=""/>
                         <p className="fontNunito text-gray-500 text-[16px]">
                             Vị trí ngồi rộng rãi tại nhà hàng Thủy Tạ
                             xem biểu diễn Laser show màn nước 3D trên hồ Đầm Sen 2019
@@ -115,9 +115,9 @@ function SuKienWaterShow() {
                         <div className="flex-shrink-0 relative">
                             <button
                                 className="absolute left-[-30px] top-[50%] transform -translate-y-1/2 text-pink-500">
-                                <img className="w-2 h-5" src="src/assets/LeftArrow_2.svg" alt=""/>
+                                <img className="w-2 h-5" src="src/assets/svg/LeftArrow_2.svg" alt=""/>
                             </button>
-                            <img className="h-[165px]" src="src/assets/hippo.png" alt=""/>
+                            <img className="h-[165px]" src="src/assets/png/hippo.png" alt=""/>
                             <div className="flex pt-2 justify-between">
                                 <h3 className="text-[#259E58] fontNunito-semibold text-[14px]">
                                     Hà Mã Châu Phi
@@ -125,11 +125,11 @@ function SuKienWaterShow() {
                                 <p className="text-[14px] fontNunito text-gray-500">04/01/2021</p>
                             </div>
                             <div className="flex text-[#EC008C] text-[14px] fontNunito-semibold">
-                                <img className="mr-1" src="src/assets/tag.svg" alt=""/> <span>Vườn thú</span>
+                                <img className="mr-1" src="src/assets/svg/tag.svg" alt=""/> <span>Vườn thú</span>
                             </div>
                         </div>
                         <div className="flex-shrink-0 relative">
-                            <img className="h-[165px]" src="src/assets/vong-xoay-khong-gian.png" alt=""/>
+                            <img className="h-[165px]" src="src/assets/png/vong-xoay-khong-gian.png" alt=""/>
                             <div className="flex pt-2 justify-between">
                                 <h3 className="text-[#259E58] fontNunito-semibold text-[14px]">
                                     Vòng xoay không gian
@@ -137,11 +137,11 @@ function SuKienWaterShow() {
                                 <p className="text-[14px] fontNunito text-gray-500">11/02/2020</p>
                             </div>
                             <div className="flex text-[#EC008C] text-[14px] fontNunito-semibold">
-                                <img className="mr-1" src="src/assets/tag.svg" alt=""/> <span>Cảm giác mạnh</span>
+                                <img className="mr-1" src="src/assets/svg/tag.svg" alt=""/> <span>Cảm giác mạnh</span>
                             </div>
                         </div>
                         <div className="flex-shrink-0 relative">
-                            <img className="h-[165px]" src="src/assets/vong-quay-than-toc.png" alt=""/>
+                            <img className="h-[165px]" src="src/assets/png/vong-quay-than-toc.png" alt=""/>
                             <div className="flex pt-2 justify-between">
                                 <h3 className="text-[#259E58] fontNunito-semibold text-[14px]">
                                     Vòng quay thần tốc
@@ -149,14 +149,14 @@ function SuKienWaterShow() {
                                 <p className="text-[14px] fontNunito text-gray-500">12/02/2020</p>
                             </div>
                             <div className="flex text-[#EC008C] text-[14px] fontNunito-semibold">
-                                <img className="mr-1" src="src/assets/tag.svg" alt=""/> <span>Cảm giác mạnh</span>
+                                <img className="mr-1" src="src/assets/svg/tag.svg" alt=""/> <span>Cảm giác mạnh</span>
                             </div>
                         </div>
                         <div className="flex-shrink-0 relative">
-                            <img className="object-cover w-[247.5px] h-[165px]" src="src/assets/ca-chep-nhao-lon.png" alt=""/>
+                            <img className="object-cover w-[247.5px] h-[165px]" src="src/assets/png/ca-chep-nhao-lon.png" alt=""/>
                             <button
                                 className="absolute right-[-30px] top-[50%] transform -translate-y-1/2 text-pink-500">
-                                <img className="w-2 h-5" src="src/assets/RightArrow_2.svg" alt=""/>
+                                <img className="w-2 h-5" src="src/assets/svg/RightArrow_2.svg" alt=""/>
                             </button>
                             <div className="flex pt-2 justify-between">
                                 <h3 className="text-[#259E58] fontNunito-semibold text-[14px]">
@@ -165,7 +165,7 @@ function SuKienWaterShow() {
                                 <p className="text-[14px] fontNunito text-gray-500">11/02/2020</p>
                             </div>
                             <div className="flex text-[#EC008C] text-[14px] fontNunito-semibold">
-                                <img className="mr-1" src="src/assets/tag.svg" alt=""/> <span>Cảm giác mạnh</span>
+                                <img className="mr-1" src="src/assets/svg/tag.svg" alt=""/> <span>Cảm giác mạnh</span>
                             </div>
                         </div>
                     </div>

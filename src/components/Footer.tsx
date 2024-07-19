@@ -29,7 +29,7 @@ function Footer() {
         <>
             <div className="w-full mt-24 bg-[#259E58] text-white py-y px-2 font">
                 <div className="max-w-[1663px] mx-auto grid grid-cols-2 md:grid-cols-4 border-b-2 border-white py-8">
-                    <img className="pl-10" src="src/assets/logo-footer.svg" alt=""/>
+                    <img className="pl-10" src="../assets/svg/logo-footer.svg" alt=""/>
                     {
                         sections.map((section, index) => (
                             <div key={index}>

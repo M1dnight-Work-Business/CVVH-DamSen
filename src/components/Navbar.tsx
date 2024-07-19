@@ -5,7 +5,7 @@ import {useRef, useState} from "react";
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [hamburgerImage, setHamburgerImage] = useState('src/assets/hamburger.svg'); // Initial image path
+    const [hamburgerImage, setHamburgerImage] = useState('src/assets/svg/hamburger.svg'); // Initial image path
 
     const [isPopoverOpen_GioiThieu, setIsPopoverOpen_GioiThieu] = useState(false)
     const [isPopoverOpen_GiaVe, setIsPopoverOpen_GiaVe] = useState(false)
@@ -13,9 +13,9 @@ function Navbar() {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
         if (isMenuOpen) {
-            setHamburgerImage('src/assets/hamburger.svg');
+            setHamburgerImage('src/assets/svg/hamburger.svg');
         } else {
-            setHamburgerImage('src/assets/Close.svg');
+            setHamburgerImage('src/assets/svg/Close.svg');
         }
     };
 
@@ -140,12 +140,12 @@ function Navbar() {
                 </ul>
 
                 <div className="flex flex-col pb-5 gap-5">
-                    <img src="src/assets/DamSen.svg" alt="dam_sen"/>
+                    <img src="src/assets/svg/DamSen.svg" alt="dam_sen"/>
                     <hr/>
                     <div className="flex flex-row justify-center gap-4">
-                        <img src="src/assets/facebook.svg" alt="facebook"/>
-                        <img src="src/assets/youtube.svg" alt="youtube"/>
-                        <img src="src/assets/instagram.svg" alt="instagram"/>
+                        <img src="src/assets/svg/facebook.svg" alt="facebook"/>
+                        <img src="src/assets/svg/youtube.svg" alt="youtube"/>
+                        <img src="src/assets/svg/instagram.svg" alt="instagram"/>
                     </div>
                 </div>
             </aside>

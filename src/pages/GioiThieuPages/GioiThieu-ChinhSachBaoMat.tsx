@@ -10,7 +10,7 @@ function GioiThieuChinhSachBaoMat() {
         <section>
             <div className="bg-[#ECF3E0] justify-center p-6">
                 <div className="bg-white p-6 justify-center">
-                    <img src="src/assets/than-tai.png" alt=""/>
+                    <img src="src/assets/png/than-tai.png" alt=""/>
                     <div className="h-auto text-left pt-[56px] float">
                         <h1 className="fontBanger text-[76px] text-[#259E58] underline uppercase gap-2 w-fit">
                             chính sách bảo mật
@@ -40,7 +40,7 @@ function GioiThieuChinhSachBaoMat() {
                         </p>
                     </div>
                     <div>
-                        <img src="src/assets/TrangChu.png" alt=""/>
+                        <img src="src/assets/png/TrangChu.png" alt=""/>
                     </div>
                     <div className={classNameTailwind?.div}>
                         <h2 className="uppercase">

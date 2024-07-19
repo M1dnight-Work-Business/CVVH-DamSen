@@ -5,15 +5,15 @@ function KhamPhaKhiDuoiDai() {
         <section>
             <div className="bg-[#ECF3E0] justify-center p-6">
                 <div className="bg-white p-6 justify-center">
-                    <img src="src/assets/monkey_1.png" alt=""/>
+                    <img src="src/assets/png/monkey_1.png" alt=""/>
                     <div className="h-auto text-left pt-[56px] float">
                         <h1 className="fontBanger text-[76px] text-[#259E58] underline uppercase gap-2 w-fit">
                             Khỉ đuôi dài
                         </h1>
                         <div className="flex">
-                            <img src="src/assets/tag.svg" alt=""/>
+                            <img src="src/assets/svg/tag.svg" alt=""/>
                             <p className="fontNunito-bold text-[16px] text-pink-500 pl-0.5 pr-4">Vườn thú</p>
-                            <img src="src/assets/time.svg" alt=""/>
+                            <img src="src/assets/svg/time.svg" alt=""/>
                             <p className="fontNunito pl-0.5 text-gray-500 text-[16px]">04/01/2021</p>
                         </div>
                         <div
@@ -25,7 +25,7 @@ function KhamPhaKhiDuoiDai() {
                             </p>
                         </div>
                         <div className="flex pt-20">
-                            <img className="object-cover w-[474px] h-[386px]" src="src/assets/monkey_2.png" alt=""/>
+                            <img className="object-cover w-[474px] h-[386px]" src="src/assets/png/monkey_2.png" alt=""/>
                             <h2 className="pl-6 fontBanger pt-10 pb-6 text-[40px] text-pink-500 gap-2 w-[951px]">
                                 Tìm hiểu về khỉ đuôi dài
                                 <p className="text-[18px] text-gray-500 fontNunito pt-6">
@@ -44,7 +44,7 @@ function KhamPhaKhiDuoiDai() {
 
                         <div className="flex pt-20 flex-row-reverse">
                             <img className="object-cover w-[474px] h-[386px] md:w-[474px] md:h-[386px] md:pl-6"
-                                 src="src/assets/monkey_4.png" alt=""/>
+                                 src="src/assets/png/monkey_4.png" alt=""/>
                             <p className="text-[18px] text-gray-500 fontNunito pt-16 leading-[27px] space-2">
                                 Con đực lớn thường có hai chỏm lông trắng trên miệng như bộ ria.
                                 Con cái có lông quanh mồm thưa hơn. Con non sinh ra có màu đen.
@@ -62,7 +62,7 @@ function KhamPhaKhiDuoiDai() {
                         </div>
 
                         <div className="flex pt-20">
-                            <img className="object-cover w-[475px] h-[500px]" src="src/assets/monkey_5.png" alt=""/>
+                            <img className="object-cover w-[475px] h-[500px]" src="src/assets/png/monkey_5.png" alt=""/>
                             <h2 className="pl-6 fontBanger pt-10 pb-6 text-[40px] text-pink-500 gap-2 w-[951px]">
                                 Cuộc chiến quyền lực
                                 <p className="text-[18px] text-gray-500 fontNunito pt-6">
@@ -109,9 +109,9 @@ function KhamPhaKhiDuoiDai() {
                             <div className="flex-shrink-0 relative">
                                 <button
                                     className="absolute left-[-30px] top-[50%] transform -translate-y-1/2 text-pink-500">
-                                    <img className="w-2 h-5" src="src/assets/LeftArrow_2.svg" alt=""/>
+                                    <img className="w-2 h-5" src="src/assets/svg/LeftArrow_2.svg" alt=""/>
                                 </button>
-                                <img className="h-[165px]" src="src/assets/monkey_6.png" alt=""/>
+                                <img className="h-[165px]" src="src/assets/png/monkey_6.png" alt=""/>
                                 <div className="flex pt-2 justify-between">
                                     <h3 className="text-[#259E58] fontNunito-semibold text-[20px]">
                                         Khỉ đuôi dài
@@ -119,11 +119,11 @@ function KhamPhaKhiDuoiDai() {
                                     <p className="text-[16px] text-gray-500">04/01/2021</p>
                                 </div>
                                 <div className="flex text-[#EC008C] text-[16px] fontNunito-semibold">
-                                    <img className="mr-1" src="src/assets/tag.svg" alt=""/> <span>Vườn thú</span>
+                                    <img className="mr-1" src="src/assets/svg/tag.svg" alt=""/> <span>Vườn thú</span>
                                 </div>
                             </div>
                             <div className="flex-shrink-0 relative">
-                                <img className="h-[165px]" src="src/assets/bear.png" alt=""/>
+                                <img className="h-[165px]" src="src/assets/png/bear.png" alt=""/>
                                 <div className="flex pt-2 justify-between">
                                     <h3 className="text-[#259E58] fontNunito-semibold text-[20px]">
                                         Gấu ngựa
@@ -131,11 +131,11 @@ function KhamPhaKhiDuoiDai() {
                                     <p className="text-[16px] text-gray-500">02/03/2020</p>
                                 </div>
                                 <div className="flex text-[#EC008C] text-[16px] fontNunito-semibold">
-                                    <img className="mr-1" src="src/assets/tag.svg" alt=""/> <span>Vườn thú</span>
+                                    <img className="mr-1" src="src/assets/svg/tag.svg" alt=""/> <span>Vườn thú</span>
                                 </div>
                             </div>
                             <div className="flex-shrink-0 relative">
-                                <img className="h-[165px]" src="src/assets/monkey_7.png" alt=""/>
+                                <img className="h-[165px]" src="src/assets/png/monkey_7.png" alt=""/>
                                 <div className="flex pt-2 justify-between">
                                     <h3 className="text-[#259E58] fontNunito-semibold text-[20px]">
                                         Đười ươi Sumatra
@@ -143,14 +143,14 @@ function KhamPhaKhiDuoiDai() {
                                     <p className="text-[16px] text-gray-500">05/03/2020</p>
                                 </div>
                                 <div className="flex text-[#EC008C] text-[16px] fontNunito-semibold">
-                                    <img className="mr-1" src="src/assets/tag.svg" alt=""/> <span>Vườn thú</span>
+                                    <img className="mr-1" src="src/assets/svg/tag.svg" alt=""/> <span>Vườn thú</span>
                                 </div>
                             </div>
                             <div className="flex-shrink-0 relative">
-                                <img className="h-[165px]" src="src/assets/hippo.png" alt=""/>
+                                <img className="h-[165px]" src="src/assets/png/hippo.png" alt=""/>
                                 <button
                                     className="absolute right-[-30px] top-[50%] transform -translate-y-1/2 text-pink-500">
-                                    <img className="w-2 h-5" src="src/assets/RightArrow_2.svg" alt=""/>
+                                    <img className="w-2 h-5" src="src/assets/svg/RightArrow_2.svg" alt=""/>
                                 </button>
                                 <div className="flex pt-2 justify-between">
                                     <h3 className="text-[#259E58] fontNunito-semibold text-[20px]">
@@ -159,7 +159,7 @@ function KhamPhaKhiDuoiDai() {
                                     <p className="text-[16px] text-gray-500">05/03/2020</p>
                                 </div>
                                 <div className="flex text-[#EC008C] text-[16px] fontNunito-semibold">
-                                    <img className="mr-1" src="src/assets/tag.svg" alt=""/> <span>Vườn thú</span>
+                                    <img className="mr-1" src="src/assets/svg/tag.svg" alt=""/> <span>Vườn thú</span>
                                 </div>
                             </div>
                         </div>

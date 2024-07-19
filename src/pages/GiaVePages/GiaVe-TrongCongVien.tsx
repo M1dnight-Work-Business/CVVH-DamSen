@@ -17,7 +17,7 @@ function GiaVeTrongCongVien() {
         <section>
             <div className="bg-[#ECF3E0] justify-center items-start p-6">
                 <div className="bg-white p-6 justify-center">
-                    <img className=" w-full " src="src/assets/gia-ve.png" alt=""/>
+                    <img className=" w-full " src="src/assets/png/gia-ve.png" alt=""/>
                     <div className="text-left pt-[56px]">
                         <h1 className="fontBanger text-[96px] text-[#259E58] underline uppercase gap-2">
                             vé trong công viên
@@ -37,15 +37,15 @@ function GiaVeTrongCongVien() {
                                     Vé tham quan
                                 </div>
                                 <div className="pt-5 flex fontNunito text-[16px]">
-                                    <img src="src/assets/check.svg" alt="" className="mr-2"/>
+                                    <img src="src/assets/svg/check.svg" alt="" className="mr-2"/>
                                     <span className="text-gray-500">Tham quan trong ngày</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
-                                    <img src="src/assets/x.svg" alt="" className="mr-2 -ml-1"/>
+                                    <img src="src/assets/svg/x.svg" alt="" className="mr-2 -ml-1"/>
                                     <span className="text-gray-400 line-through">Bao gồm trò chơi</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
-                                    <img src="src/assets/x.svg" alt="" className="mr-2 -ml-1"/>
+                                    <img src="src/assets/svg/x.svg" alt="" className="mr-2 -ml-1"/>
                                     <span className="text-gray-400 line-through">Dịch vụ xe điện</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
@@ -81,19 +81,19 @@ function GiaVeTrongCongVien() {
                                     Vé trọn gói
                                 </div>
                                 <div className="pt-5 flex fontNunito text-[16px]">
-                                    <img src="src/assets/check.svg" alt="" className="mr-2"/>
+                                    <img src="src/assets/svg/check.svg" alt="" className="mr-2"/>
                                     <span className="text-gray-500">Tham quan trong ngày</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
-                                    <img src="src/assets/check.svg" alt="" className="mr-2"/>
+                                    <img src="src/assets/svg/check.svg" alt="" className="mr-2"/>
                                     <span className="text-gray-500">Bao gồm trò chơi</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
-                                    <img src="src/assets/x.svg" alt="" className="mr-2 -ml-1"/>
+                                    <img src="src/assets/svg/x.svg" alt="" className="mr-2 -ml-1"/>
                                     <span className="text-gray-400 line-through">Thuỷ cung</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
-                                    <img src="src/assets/x.svg" alt="" className="mr-2 -ml-1"/>
+                                    <img src="src/assets/svg/x.svg" alt="" className="mr-2 -ml-1"/>
                                     <span className="text-gray-400 line-through">Dịch vụ xe điện</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
@@ -136,27 +136,27 @@ function GiaVeTrongCongVien() {
                                     Vé silver
                                 </div>
                                 <div className="pt-5 flex fontNunito text-[16px]">
-                                    <img src="src/assets/check.svg" alt="" className="mr-2"/>
+                                    <img src="src/assets/svg/check.svg" alt="" className="mr-2"/>
                                     <span className="text-gray-500">Tham quan trong ngày</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
-                                    <img src="src/assets/check.svg" alt="" className="mr-2"/>
+                                    <img src="src/assets/svg/check.svg" alt="" className="mr-2"/>
                                     <span className="text-gray-500">Bao gồm trò chơi</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
-                                    <img src="src/assets/check.svg" alt="" className="mr-2"/>
+                                    <img src="src/assets/svg/check.svg" alt="" className="mr-2"/>
                                     <span className="text-gray-500">Lối đi riêng</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
-                                    <img src="src/assets/x.svg" alt="" className="mr-2 -ml-1"/>
+                                    <img src="src/assets/svg/x.svg" alt="" className="mr-2 -ml-1"/>
                                     <span className="text-gray-400 line-through">Thuỷ cung</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
-                                    <img src="src/assets/x.svg" alt="" className="mr-2 -ml-1"/>
+                                    <img src="src/assets/svg/x.svg" alt="" className="mr-2 -ml-1"/>
                                     <span className="text-gray-400 line-through">Massage cá</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">
-                                    <img src="src/assets/x.svg" alt="" className="mr-2 -ml-1"/>
+                                    <img src="src/assets/svg/x.svg" alt="" className="mr-2 -ml-1"/>
                                     <span className="text-gray-400 line-through">Dịch vụ xe điên</span>
                                 </div>
                                 <div className="pt-1 fontNunito flex text-[16px]">

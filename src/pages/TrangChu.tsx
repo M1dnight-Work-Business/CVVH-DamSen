@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 function TrangChu() {
     const imageList = [
-        "src/assets/TrangChu.png",
-        "src/assets/thanh-vien.png",
-        "src/assets/than-tai.png",
+        "src/assets/png/TrangChu.png",
+        "src/assets/png/thanh-vien.png",
+        "src/assets/png/than-tai.png",
     ];
     
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -30,24 +30,24 @@ function TrangChu() {
     };
 
     return (
-        <section>
-            <div className="bg-[#ECF3E0] flex h-screen relative justify-center items-center">
+        <section className="w-full">
+            <div className="bg-[#ECF3E0] flex h-screen relative justify-center items-center w-full">
                 <div className="absolute pt-[60px] top-0">
-                    <img src="src/assets/DamSen.svg" alt=""/>
+                    <img src="src/assets/svg/DamSen.svg" alt=""/>
                 </div>
-                <div className="p-6 h-full flex justify-center items-center">
-                    <img className="h-full object-cover" src={imageList[currentImageIndex]} alt=""/>
+                <div className="p-6 h-full flex justify-center items-center w-full">
+                    <img className="h-full object-fill w-full" src={imageList[currentImageIndex]} alt=""/>
                     
                     <button
                         className="absolute top-[50%] left-0 transform -translate-y-1/2 bg-transparent z-10"
                         onClick={prevImage}>
-                        <img src="src/assets/LeftArrow.svg" alt="Left" className="w-10 h-10 mx-10" />
+                        <img src="src/assets/svg/LeftArrow.svg" alt="Left" className="w-10 h-10 mx-10" />
                     </button>
                     
                     <button
                         className="absolute top-[50%] right-0 transform -translate-y-1/2 bg-transparent z-10"
                         onClick={nextImage}>
-                        <img src="src/assets/RightArrow.svg" alt="Right" className="w-10 h-10 mx-10" />
+                        <img src="src/assets/svg/RightArrow.svg" alt="Right" className="w-10 h-10 mx-10" />
                     </button>
                     
                     <button

@@ -15,7 +15,7 @@ function GiaVeTapTheDuc() {
         <section>
             <div className="bg-[#ECF3E0] justify-center items-start p-6">
                 <div className="bg-white p-6 justify-center">
-                    <img className=" w-full " src="src/assets/tap-the-duc.png" alt=""/>
+                    <img className=" w-full " src="src/assets/png/tap-the-duc.png" alt=""/>
                     <div className="text-left pt-[56px]">
                         <h1 className="fontBanger text-[96px] text-[#259E58] underline uppercase gap-2">
                             vé tập thể dục
@@ -38,7 +38,7 @@ function GiaVeTapTheDuc() {
                         <div className="pt-12 flex gap-[60px] justify-center flex-wrap">
                             <div className={classNameTailwind?.div_GioMoCua}>
                                 <div className={classNameTailwind?.div_GioMoCua__}>
-                                    <img className="w-[90px] h-[90px]" src="src/assets/gio-mo-cua.svg" alt=""/>
+                                    <img className="w-[90px] h-[90px]" src="src/assets/svg/gio-mo-cua.svg" alt=""/>
                                 </div>
                                 <h1 className="text-center uppercase fontNunito-semibold -mt-[40px] text-[30px] leading-[48px] text-[#259E58]">
                                     giờ mở cửa
@@ -53,7 +53,7 @@ function GiaVeTapTheDuc() {
 
                             <div className={classNameTailwind?.div_GiaVe}>
                                 <div className={classNameTailwind?.div_GiaVe__}>
-                                    <img className="w-[90px] h-[90px]" src="src/assets/gia-ve.svg" alt=""/>
+                                    <img className="w-[90px] h-[90px]" src="src/assets/svg/gia-ve.svg" alt=""/>
                                 </div>
                                 <h1 className="text-center uppercase fontNunito-semibold -mt-[40px] text-[30px] leading-[48px] text-[#FF41B2]">
                                     giá vé
@@ -64,7 +64,7 @@ function GiaVeTapTheDuc() {
                             </div>
                             <div className={classNameTailwind?.div_VeThang}>
                                 <div className={classNameTailwind?.div_VeThang__}>
-                                    <img className="w-[90px] h-[90px] " src="src/assets/ve-thang.svg" alt=""/>
+                                    <img className="w-[90px] h-[90px] " src="src/assets/svg/ve-thang.svg" alt=""/>
                                 </div>
                                 <h1 className="text-center uppercase fontNunito-semibold -mt-[40px] text-[30px] leading-[48px] text-[#3781DB]">
                                     vé tháng

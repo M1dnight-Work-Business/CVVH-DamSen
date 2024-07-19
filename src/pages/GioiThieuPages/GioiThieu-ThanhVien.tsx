@@ -3,7 +3,7 @@ function GioiThieuThanhVien(){
         <section>
             <div className="bg-[#ECF3E0] justify-center p-6">
                 <div className="bg-white p-6 justify-center">
-                    <img src="src/assets/thanh-vien.png" alt=""/>
+                    <img src="src/assets/png/thanh-vien.png" alt=""/>
                     <div className="h-auto text-left pt-[56px] float">
                         <h1 className="fontBanger text-[76px] text-[#259E58] underline uppercase gap-2 w-fit">
                             Thành viên
