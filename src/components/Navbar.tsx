@@ -127,8 +127,7 @@ function Navbar() {
                                         <NavLink to='/gia-ve-tap-the-duc'>Vé tập thể dục</NavLink>
                                     </div>
                                 </ArrowContainer>
-                            )}
-                        >
+                            )}>
                             <button className="pl-8" onClick={() => setIsPopoverOpen_GiaVe(!isPopoverOpen_GiaVe)}>
                                 <RiArrowRightSLine/>
                             </button>
@@ -139,7 +138,7 @@ function Navbar() {
                     </li>
                 </ul>
 
-                <div className="flex flex-col pb-5 gap-5">
+                <div className="flex flex-col pb-3 gap-5">
                     <img src="src/assets/svg/DamSen.svg" alt="dam_sen"/>
                     <hr/>
                     <div className="flex flex-row justify-center gap-4">

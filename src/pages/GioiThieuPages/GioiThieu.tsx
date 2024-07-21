@@ -4,11 +4,7 @@ function GioiThieu() {
         ul: "text-left pl-6 fontNunito-bold text-gray-500 text-[16px] -ml-1 leading-[27px] list-disc",
         span: "fontNunito text-gray-400",
     }
-    const listhoatdong = [
-        "Baby",
-        "Girl",
-    ]
-    
+
     return (
         <section>
             <div className="bg-[#ECF3E0] justify-center p-6">
@@ -202,33 +198,6 @@ function GioiThieu() {
                             Giá vé
                         </h2>
                     </div>
-                    
-                    
-                    
-                    <ul>
-                        {listhoatdong.map((item, key ) =>  {
-                            return (
-                                <li>
-                                    <div className="flex w-fit">
-                                        <div
-                                            className="rounded-full h-24 w-24 flex items-center justify-center bg-green-800">
-                                            <h2>
-                                                {key +1}
-                                            </h2>
-                                        </div>
-                                        <div>
-                                            <p>
-                                                {item}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                            )
-                            }
-                        )}
-
-                    </ul>
-
 
                     <div className="pt-12">
                         <h2 className="text-[23px] text-[#EC008C] uppercase fontNunito-semibold">Ghi chú:</h2>

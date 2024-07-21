@@ -1,3 +1,5 @@
+import Footer from "../../components/Footer.tsx";
+
 function GiaVeTrongCongVien() {
     const classNameTailwind = {
         ul: "text-left pl-6 fontNunito-bold text-gray-500 text-[16px] -ml-1 leading-[27px] list-disc",

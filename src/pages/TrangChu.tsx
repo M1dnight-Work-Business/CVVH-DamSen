@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import {useState} from 'react';
+import {Link} from "react-router-dom";
 
 function TrangChu() {
     const imageList = [
@@ -6,13 +7,13 @@ function TrangChu() {
         "src/assets/png/thanh-vien.png",
         "src/assets/png/than-tai.png",
     ];
-    
+
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    
+
     const changeImage = (index) => {
         setCurrentImageIndex(index);
     };
-    
+
     const prevImage = () => {
         if (currentImageIndex === 0) {
             setCurrentImageIndex(imageList.length - 1);
@@ -20,7 +21,7 @@ function TrangChu() {
             setCurrentImageIndex(currentImageIndex - 1);
         }
     };
-    
+
     const nextImage = () => {
         if (currentImageIndex === imageList.length - 1) {
             setCurrentImageIndex(0);
@@ -37,24 +38,25 @@ function TrangChu() {
                 </div>
                 <div className="p-6 h-full flex justify-center items-center w-full">
                     <img className="h-full object-fill w-full" src={imageList[currentImageIndex]} alt=""/>
-                    
+
                     <button
                         className="absolute top-[50%] left-0 transform -translate-y-1/2 bg-transparent z-10"
                         onClick={prevImage}>
-                        <img src="src/assets/svg/LeftArrow.svg" alt="Left" className="w-10 h-10 mx-10" />
+                        <img src="src/assets/svg/LeftArrow.svg" alt="Left" className="w-10 h-10 mx-10"/>
                     </button>
-                    
+
                     <button
                         className="absolute top-[50%] right-0 transform -translate-y-1/2 bg-transparent z-10"
                         onClick={nextImage}>
-                        <img src="src/assets/svg/RightArrow.svg" alt="Right" className="w-10 h-10 mx-10" />
+                        <img src="src/assets/svg/RightArrow.svg" alt="Right" className="w-10 h-10 mx-10"/>
                     </button>
-                    
-                    <button
-                        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-[#259E58] 
-                                   text-white my-[91px] w-[180px] h-[45px] text-center text-[16px] 
-                                   leading-[31.37px] uppercase fontNunito-bold rounded-lg">
-                        Khám phá ngay
+
+                    <button className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-[#259E58] 
+                                       text-white my-[91px] w-[180px] h-[45px] text-center text-[16px] 
+                                       leading-[31.37px] uppercase fontNunito-bold rounded-lg">
+                        <Link to="/kham-pha">
+                            Khám phá ngay
+                        </Link>
                     </button>
                 </div>
             </div>
