@@ -1,6 +1,27 @@
 import {FaArrowLeftLong, FaArrowRightLong} from "react-icons/fa6";
+import {useEffect, useState} from "react";
+import {collection, DocumentData, getDocs} from "firebase/firestore";
+import {firestore} from "../../lib/firebase.ts";
 
 function KhamPhaKhiDuoiDai() {
+    const [data, setData] = useState<DocumentData[]>([]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const colRef = await getDocs(collection(firestore, "KhiDuoiDai"));
+                const fetchedData: DocumentData[] = [];
+
+                colRef.forEach((doc) => {
+                    fetchedData.push(doc.data());
+                });
+                setData(fetchedData);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
+        fetchData();
+    }, []);
+    
     return (
         <section>
             <div className="bg-[#ECF3E0] justify-center p-6">
@@ -29,12 +50,11 @@ function KhamPhaKhiDuoiDai() {
                             <h2 className="pl-6 fontBanger pt-10 pb-6 text-[40px] text-pink-500 gap-2 w-[951px]">
                                 Tìm hiểu về khỉ đuôi dài
                                 <p className="text-[18px] text-gray-500 fontNunito pt-6">
-                                    Khỉ đuôi dài (Macaca fascicularis) có đuôi dài gần bằng hoặc hơn chiều dài cơ thể
-                                    (khoảng 50 cm),
-                                    và là loài có đuôi dài nhất. Lông chúng thường có màu xám đến nâu đỏ. Màu lông phía
-                                    sau
-                                    nhạt hơn,
-                                    và lông trên đầu mọc hướng về sau. Thường có mào. Mặt có màu hồng.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.ThongTin1}
+                                        </div>
+                                    ))}
                                 </p>
                             </h2>
                         </div>
@@ -46,18 +66,17 @@ function KhamPhaKhiDuoiDai() {
                             <img className="object-cover w-[474px] h-[386px] md:w-[474px] md:h-[386px] md:pl-6"
                                  src="src/assets/png/monkey_4.png" alt=""/>
                             <p className="text-[18px] text-gray-500 fontNunito pt-16 leading-[27px] space-2">
-                                Con đực lớn thường có hai chỏm lông trắng trên miệng như bộ ria.
-                                Con cái có lông quanh mồm thưa hơn. Con non sinh ra có màu đen.
-                                Thức ăn chủ yếu là quả, hạt, nõn cây, lá và động vật như côn trùng, ếch, nhái, cua….
-                                Chúng hoạt động vào ban ngày và trên cây.
-                                Loài này bơi rất giỏi và thường nhảy xuống nước từ cành cây.
+                                {data.map((item, index) => (
+                                    <div key={index}>
+                                        {item.ThongTin2}
+                                    </div>
+                                ))}
                                 <br/>
-                                <br/>
-                                Trong tự nhiên, Khỉ đuôi dài sống thành đàn từ 10-100 con.
-                                Trung bình 1 con đực sẽ có 2,5 con cái. Mỗi lần mang thai từ 160 – 170 ngày.
-                                Và chỉ sinh 1 con. Điểm đặc biệt khỉ chúa là dáng vẻ oai phong.
-                                Đồng thời, khỉ chúa chỉ “cưng nhất” một chú khỉ con nào đó.
-                                Và chú khỉ con ấy sẽ được xem là “thái tử” kế vị ngôi sau này.
+                                {data.map((item, index) => (
+                                    <div key={index}>
+                                        {item.ThongTin3}
+                                    </div>
+                                ))}
                             </p>
                         </div>
 
@@ -66,20 +85,23 @@ function KhamPhaKhiDuoiDai() {
                             <h2 className="pl-6 fontBanger pt-10 pb-6 text-[40px] text-pink-500 gap-2 w-[951px]">
                                 Cuộc chiến quyền lực
                                 <p className="text-[18px] text-gray-500 fontNunito pt-6">
-                                    Nếu con khỉ đực nào trong bầy có ý định “léng phéng” với các tề thiếp của khỉ chúa,
-                                    nó sẽ bị đánh đuổi ra khỏi đàn. Còn nếu muốn “đảo chính” thì không hề dễ bởi vóc
-                                    dáng to lớn của khỉ chúa. Thường thì đám khỉ đực chỉ dám “giành ngôi” khi khỉ chúa
-                                    già hoặc bệnh tật. Còn không thì chúng phải di tản sang địa bàn khác, hoặc lẩn tránh
-                                    khi khỉ chúa xuất hiện.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.CuocChien1}
+                                        </div>
+                                    ))}
                                     <br/>
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.CuocChien2}
+                                        </div>
+                                    ))}
                                     <br/>
-                                    Những con khỉ bị phế truất như vậy sẽ lang thang tìm bầy khác gia nhập. Hoặc tìm
-                                    những bầy yếu hơn để khiêu chiến. Chúng đánh nhau “một mất một còn”, và nếu nó
-                                    thắng, bầy đó là của nó. Đó là bản chất của đời sống hoang dã.
-                                    <br/>
-                                    <br/>
-                                    Loại khỉ đuôi dài này đang được chăm sóc tại khu vườn thú của Công viên Văn hóa Đầm
-                                    Sen.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.CuocChien3}
+                                        </div>
+                                    ))}
                                 </p>
                             </h2>
                         </div>

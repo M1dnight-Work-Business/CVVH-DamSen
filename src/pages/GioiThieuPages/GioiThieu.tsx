@@ -1,9 +1,30 @@
 import { FaArrowRightLong } from "react-icons/fa6";
+import {useEffect, useState} from "react";
+import {collection, DocumentData, getDocs} from "firebase/firestore";
+import {firestore} from "../../lib/firebase.ts";
 function GioiThieu() {
     const classNameTailwind = {
         ul: "text-left pl-6 fontNunito-bold text-gray-500 text-[16px] -ml-1 leading-[27px] list-disc",
         span: "fontNunito text-gray-400",
     }
+    
+    const [data, setData] = useState<DocumentData[]>([]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const colRef = await getDocs(collection(firestore, "GioiThieu"));
+                const fetchedData: DocumentData[] = [];
+
+                colRef.forEach((doc) => {
+                    fetchedData.push(doc.data());
+                });
+                setData(fetchedData);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
+        fetchData();
+    }, []);
 
     return (
         <section>
@@ -29,12 +50,11 @@ function GioiThieu() {
                                     Hơn 30 trò chơi
                                 </h1>
                                 <p className="pt-8 text-[16px] leading-[27px]">
-                                    Công viên Văn hóa Đầm Sen có 13 trò chơi cảm giác mạnh
-                                    (Tàu lượn siêu tốc, vượt thác, Power Surge…);
-                                    5 trò chơi tương tác ảo công nghệ hiện đại;
-                                    5 trò chơi thư giãn;
-                                    12 trò chơi thiếu nhi;
-                                    và nhiều trò chơi khác.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.Hon30TroChoi}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="absolute top-[75px] -right-44">
@@ -62,13 +82,11 @@ function GioiThieu() {
                                     Nhiều loại thú quý hiếm
                                 </h1>
                                 <p className="pt-8 text-[16px] leading-[27px]">
-                                    Đầm Sen còn được biết đến như một vườn thú có thể nuôi sinh sản được các loại động
-                                    vật quý hiếm
-                                    (thuộc sách đỏ) như: đười ươi Sumatra (sinh 2 lần); vượn má vàng; chim già đẩy, chim
-                                    Giang sen…
-                                    Ngoài ra còn có một Thủy cung với các loài thủy sinh vật biển và cá Amazon phong
-                                    phú,
-                                    như cá mập, cá Hải tượng (2 mét)…
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.NhieuLoaiThuQuyHiem}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="absolute top-[75px] -left-40">
@@ -96,12 +114,16 @@ function GioiThieu() {
                                     Nhà hàng Thủy Tạ Đầm Sen
                                 </h1>
                                 <p className="pt-8 text-[16px] leading-[27px]">
-                                    Ẩm thực trong Công viên Văn hóa Đầm Sen gồm nhiều món ăn đường phố trong công viên,
-                                    đặc biệt là nhà hàng Thủy Tạ, với không gian thưởng thức ẩm thực bên hồ.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.NhaHangThuyTa}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="absolute top-[75px] -right-44">
-                                <img className="object-cover h-[500px] w-[346px] " src="src/assets/png/cau-cuu-khuc-2.png"
+                                <img className="object-cover h-[500px] w-[346px] "
+                                     src="src/assets/png/cau-cuu-khuc-2.png"
                                      alt=""/>
                             </div>
                             <div className="fontNunito-bold absolute bg-white ml-[150px] w-[140px] h-[40px]
@@ -125,12 +147,11 @@ function GioiThieu() {
                                     Cà phê Vườn Đá
                                 </h1>
                                 <p className="pt-8 text-[16px] leading-[27px]">
-                                    Cà phê Vườn đá có không gian rộng, và nhiều cây xanh tại Sài Gòn.
-                                    Đặc biệt, trong khuôn viên cà phê có một bộ sưu tập đá khổng lồ,
-                                    với nhiều hình dáng kỳ dị theo nhãn quan của mỗi người.
-                                    Buổi sáng thứ bảy và chủ nhật, quán thường đông khách do có nhạc sống,
-                                    với những ca khúc bất hủ của thập niên 70-80, do các ban nhạc chuyên nghiệp TP.HCM
-                                    biểu diễn.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.CaPheVuonDa}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="absolute top-[75px] -left-40">
@@ -193,12 +214,6 @@ function GioiThieu() {
                             </p>
                         </div>
                     </div>
-                    <div className="fontBanger pt-28 pb-6 text-[40px] text-pink-500 uppercase gap-2 text-center">
-                        <h2>
-                            Giá vé
-                        </h2>
-                    </div>
-
                     <div className="pt-12">
                         <h2 className="text-[23px] text-[#EC008C] uppercase fontNunito-semibold">Ghi chú:</h2>
                         <ul className={classNameTailwind?.ul}>
@@ -207,7 +222,7 @@ function GioiThieu() {
                                 className={classNameTailwind?.span}>8 giờ 00 - 17 giờ 30</span>
                             </li>
                             <li>
-                            Vé mua từ cổng: <span className={classNameTailwind?.span}>
+                                Vé mua từ cổng: <span className={classNameTailwind?.span}>
                                                         là vé được bán tại 2 cổng chính số 1A Lạc Long Quân 
                                                         (hoặc số 3 Hòa Bình), cổng số 2 (nhà hàng Thủy Tạ).
                                                     </span>

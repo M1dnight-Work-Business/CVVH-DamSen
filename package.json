@@ -15,6 +15,9 @@
     "@nextui-org/popover": "^2.1.24",
     "@nextui-org/react": "^2.4.2",
     "@reduxjs/toolkit": "^2.2.6",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "firebase": "^10.12.4",
     "framer-motion": "^11.3.2",
     "lucide-react": "^0.407.0",
     "react": "^18.3.1",
@@ -24,7 +27,8 @@
     "react-router-dom": "^6.24.1",
     "react-slideshow-image": "^4.3.1",
     "react-tabs": "^6.0.2",
-    "react-tiny-popover": "^8.0.4"
+    "react-tiny-popover": "^8.0.4",
+    "swiper": "^11.1.5"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

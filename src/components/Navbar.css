@@ -1,0 +1,26 @@
+.tabs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .react-tabs__tab {
+        color: #67776F;
+        font-weight: normal;
+        cursor: pointer;
+        padding: 10px 20px;
+        transition: color 0.3s ease;
+        border-bottom: 1px solid #EC008C;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+
+    }
+
+    .react-tabs__tab--selected {
+        color: #EC008C;
+        font-weight: normal;
+        border-bottom: 3px solid #EC008C !important;
+    }
+}

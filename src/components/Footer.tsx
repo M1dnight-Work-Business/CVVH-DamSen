@@ -1,8 +1,8 @@
 function Footer() {
     return (
-        <footer className="fixed w-[1180px] h-fit bottom-0 bg-[#259E58] text-white">
-            <div className=" px-20 py-6">
-                <div className="flex flex-wrap justify-between">
+        <footer className=" h-fit bg-[#259E58] text-white">
+            <div className="px-20 py-6">
+                <div className="flex justify-between">
                     <div className="text-white fontBanger">
                         Trực thuộc
                         <img className="w-56 pt-[30px] " src="src/assets/svg/logo-footer.svg" alt=""/>

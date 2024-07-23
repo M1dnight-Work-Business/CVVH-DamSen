@@ -1,8 +1,31 @@
+import {useEffect, useState} from "react";
+import {collection, DocumentData, getDocs} from "firebase/firestore";
+import {firestore} from "../../lib/firebase.ts";
+
 function GioiThieuLichSuHinhThanh() {
     const classNameTailwind = {
         paragraph_one: "text-left pt-[80px] fontNunito text-gray-500 text-[18px] leading-[27px]",
         paragraph_two: "text-left mt-2 fontNunito text-gray-500 text-[18px] leading-[27px]"
     }
+
+    const [data, setData] = useState<DocumentData[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const colRef = await getDocs(collection(firestore, "LichSuHinhThanh"));
+                const fetchedData: DocumentData[] = [];
+
+                colRef.forEach((doc) => {
+                    fetchedData.push(doc.data());
+                });
+                setData(fetchedData);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
+        fetchData();
+    }, []);
 
     return (
         <section>
@@ -23,19 +46,18 @@ function GioiThieuLichSuHinhThanh() {
                         </div>
                         <div className="w-[973px]">
                             <p className={classNameTailwind?.paragraph_one}>
-                                Lịch sử hình thành CVVH Đầm Sen bắt đầu sau ngày đất nước thống nhất.
-                                Lúc bấy giờ, Đầm Sen còn là một khu ruộng hoang đầm lầy.
-                                Nơi đó chỉ toàn những đụn rau muống, rau ngổ, cây cỏ rậm rịt.
-                                Đồng thời đây cũng là nơi chứa các tệ nạn xã hội.
+                                {data.map((item, index) => (
+                                    <div key={index}>
+                                        {item.NoiDung1}
+                                    </div>
+                                ))}
                             </p>
                             <p className={classNameTailwind?.paragraph_two}>
-                                Ngày 15/2/1976, Thành ủy – UBND TP.HCM ra lời kêu gọi
-                                “Hãy xây dựng cho thành phố 3 công viên văn hóa lớn, một tại Bình Tiên, một tại Tân Bình
-                                và một tại Đầm Sen”.
-                                Hàng triệu công nhân lao động đã tham gia.
-                                Công viên Đầm Sen được khởi công như thế trên diện tích 55ha.
-                                Từ một đầm lầy hôm nào, đã sớm trở thành một hồ nước sạch,
-                                với cảnh quan thoáng mát cho người dân thành phố.
+                                {data.map((item, index) => (
+                                    <div key={index}>
+                                        {item.NoiDung2}
+                                    </div>
+                                ))}
                             </p>
                         </div>
                         <div className="w-[1001px]">
@@ -43,40 +65,37 @@ function GioiThieuLichSuHinhThanh() {
                                 các mốc son phát triển
                             </h2>
                             <ul className="list-disc pl-6 fontNunito text-[18px] leading-[27px] text-gray-500">
-                                <li>Năm 1977 – 1983: Đầm Sen do Thành Phố quản lý.
-                                    Sau đó, 8/9/1983 Thành Phố giao cho Quận 11 quản lý (55ha, theo quyết định
-                                    325/QĐ-UB).
+                                <li>{data.map((item, index) => (
+                                    <div key={index}>
+                                        {item.li1}
+                                    </div>
+                                ))}
                                 </li>
-                                <li>Quyết định 215/QĐ-UB ngày 25/5/1984 giao Đầm Sen về các đơn vị:
-                                    Ban xây dựng nhà đất và công trình quận 11,
-                                    Xí nghiệp quốc doanh nuôi trồng thủy sản và Công ty ăn uống và dịch vụ tổng hợp quận
-                                    11.
-                                    Do khó khăn chung và thiếu vốn xây dựng. Đầm Sen chỉ đáp ứng được nhu cầu kinh tế là
-                                    hồ nuôi cá thịt với một số cây rất ít,
-                                    chưa hình thành là một công viên
+                                <li>{data.map((item, index) => (
+                                    <div key={index}>
+                                        {item.li2}
+                                    </div>
+                                ))}
                                 </li>
-                                <li>Năm 1985: Quận 11 ra quyết định 108/QĐ-UB thống nhất giao Đầm Sen cho Công ty Dịch
-                                    vụ Văn hóa Tổng hợp quận 11
-                                    và có đại diện Xí nghiệp nuôi trồng thủy sản để thành lập ban quản lý Đầm Sen.
-                                </li>
-                                <li>
-                                    Năm 1989: Công ty du lịch quận 11, tức Công ty Dịch vụ Du lịch Phú Thọ ngày nay được
-                                    giao quản lý Đầm Sen,
-                                    xí nghiệp nuôi trồng thủy sản giải thể do làm ăn thua lỗ.
+                                <li>{data.map((item, index) => (
+                                    <div key={index}>
+                                        {item.li3}
+                                    </div>
+                                ))}
                                 </li>
                                 <li>
-                                    Từ đó CÔNG VIÊN VĂN HÓA ĐẦM SEN, một đơn vị trực thuộc công ty Du lịch Dịch vụ Phú
-                                    Thọ Quận 11,
-                                    từ khi đi vào hoạt động là một khu vui chơi giải trí tới nay, đã có những bước phát
-                                    triễn mạnh mẽ,
-                                    trở thành một công viên rộng lớn và hiện đại bậc nhất hiện nay ở TP. HCM,
-                                    trở thành một công viên văn hóa và du lịch đi đầu và thành công nhất trong cả nước.
-                                    Từ đầu năm 2003, Công Viên Văn Hóa Đầm Sen chính thức là thành viên của Tổng Công Ty
-                                    Du Lịch Sài Gòn (Saigontourist).
-                                    Đó là nhờ sự quan tâm tập trung đầu tư và năng động của ban giám đốc công ty Du lịch
-                                    Phú Thọ,
-                                    sự quản lý sang suốt của BGĐ và tập thể cán bộ – công nhân viên có tinh thần trách
-                                    nhiệm và dày dạn kinh nghiệm làm việc.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.li4}
+                                        </div>
+                                    ))}
+                                </li>
+                                <li>
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.li5}
+                                        </div>
+                                    ))}
                                 </li>
                             </ul>
                         </div>
@@ -96,8 +115,11 @@ function GioiThieuLichSuHinhThanh() {
                                     Trò chơi
                                 </h2>
                                 <p className="text-center text-gray-600 fontNunito text-[14px] pt-7">
-                                    Lịch sử hình thành CVVH gắn liền với sự phát triển hơn 50 trò chơi. Từ thư giãn đến
-                                    cảm giác mạnh, phân bổ đều khắp khuôn viên Đầm Sen.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.TroChoi}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="w-[335px] h-[420px] shadow-lg">
@@ -106,8 +128,11 @@ function GioiThieuLichSuHinhThanh() {
                                     Sự kiện
                                 </h2>
                                 <p className="text-center text-gray-600 fontNunito text-[14px] pt-7">
-                                    Là nơi tổ chức nhiều kỷ lục Việt Nam như kỷ lục bánh tét, bánh chưng, bánh Noel… Các
-                                    sự kiện văn hóa lớn như lễ hội: bắn pháo hoa, Cosplay, khinh khí cầu, xe cổ…
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.SuKien}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="w-[335px] h-[420px] shadow-lg">
@@ -116,9 +141,11 @@ function GioiThieuLichSuHinhThanh() {
                                     Cảnh trí
                                 </h2>
                                 <p className="text-center text-gray-600 fontNunito text-[14px] pt-7">
-                                    Với đủ loại cây xanh, từ bon sai kiểng cổ đến nhiều loài kì hoa dị thảo với các khu
-                                    vườn xanh mát: Vườn Nam Tú thượng Uyển, Đảo Lan Rừng, Vườn Xương Rồng, Vườn Hoa Châu
-                                    Âu…
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.CanhTri}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                         </div>
@@ -129,8 +156,11 @@ function GioiThieuLichSuHinhThanh() {
                                     Chim thú
                                 </h2>
                                 <p className="text-center text-gray-600 fontNunito text-[14px] pt-7">
-                                    Hơn 100 chủng loại, bao gồm động vật nuôi trồng, động vật hoang dã và động vật quý
-                                    hiếm: đười ươi, voi, trăng, cá sấu, đà điểu, hưu sao, giang sen…
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.ChimThu}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="w-[335px] h-[420px] shadow-lg">
@@ -139,8 +169,11 @@ function GioiThieuLichSuHinhThanh() {
                                     Ẩm thực
                                 </h2>
                                 <p className="text-center text-gray-600 fontNunito text-[14px] pt-7">
-                                    Được biết đến với nhà hàng Thủy Tạ, và cà phê Vườn Đá. Chuyên phục vụ các món ăn Hoa
-                                    – Việt, với đội ngũ đầu Bếp kinh nghiệm lâu năm trong ngành.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.AmThuc}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                         </div>

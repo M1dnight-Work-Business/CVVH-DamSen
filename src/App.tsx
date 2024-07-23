@@ -16,8 +16,8 @@ import KhamPhaKhiDuoiDai from "./pages/KhamPhaPages/KhamPha-KhiDuoiDai.tsx";
 import SuKienWaterShow from "./pages/SuKienPages/SuKien-WaterShow.tsx";
 import GDTN_ThucVat from "./pages/KhamPhaPages/GDTN-ThucVat.tsx";
 import KhamPhaCaChepNhaoLon from "./pages/KhamPhaPages/KhamPha-CaChepNhaoLon.tsx";
-import Footer from "./components/Footer.tsx";
 import MucLuc from "./pages/MucLuc.tsx";
+import CanhDepVuaHung from "./pages/KhamPhaPages/CanhDep-VuaHung.tsx";
 
 function App() {
     const router = createBrowserRouter(
@@ -28,6 +28,7 @@ function App() {
                 <Route path='/kham-pha-khi-duoi-dai' element={<KhamPhaKhiDuoiDai/>}/>)
                 <Route path='/kham-pha-ca-chep-nhao-lon' element={<KhamPhaCaChepNhaoLon/>}/>)
                 <Route path='/gdtn-thuc-vat' element={<GDTN_ThucVat/>}/>)
+                <Route path='/canh-dep-vua-hung' element={<CanhDepVuaHung/>}/>)
                 <Route path='/gioi-thieu' element={<GioiThieu/>}/>)
                 <Route path='/gioi-thieu-lich-su-hinh-thanh' element={<GioiThieuLichSuHinhThanh/>}/>)
                 <Route path='/gioi-thieu-thanh-vien' element={<GioiThieuThanhVien/>}/>)
@@ -39,7 +40,6 @@ function App() {
                 <Route path='/su-kien' element={<SuKien/>}/>)
                 <Route path='/su-kien-water-show' element={<SuKienWaterShow/>}/>)
                 <Route path='/muc-luc' element={<MucLuc/>}/>)
-                <Route path='/footer' element={<Footer/>}/>)
             </Route>
         )
     );

@@ -2,6 +2,8 @@ import {NavLink} from "react-router-dom";
 import {RiArrowRightSLine} from "react-icons/ri";
 import {ArrowContainer, Popover} from 'react-tiny-popover'
 import {useRef, useState} from "react";
+import 'react-tabs/style/react-tabs.css';
+import 'react-tabs/style/react-tabs.css';
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -138,7 +140,7 @@ function Navbar() {
                     </li>
                 </ul>
 
-                <div className="flex flex-col pb-3 gap-5">
+                <div className="flex flex-col pb-5 gap-5">
                     <img src="src/assets/svg/DamSen.svg" alt="dam_sen"/>
                     <hr/>
                     <div className="flex flex-row justify-center gap-4">

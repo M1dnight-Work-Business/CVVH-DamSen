@@ -1,5 +1,6 @@
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import './MucLuc.css';
 
 function MucLuc() {
     const list_TroChoi_CamGiacManh = [
@@ -86,15 +87,15 @@ function MucLuc() {
 
     return (
         <Tabs>
-            <TabList className="tabs-container pl-4 text-[30px] fontBanger text-[#67776F] tabs-justify text-[">
+            <TabList className="tabs-container pl-4 text-[30px] fontBanger text-[#67776F]">
                 <Tab>Trò chơi</Tab>
                 <Tab>Vườn thú</Tab>
                 <Tab>Cảnh đẹp</Tab>
                 <Tab>Sân khấu</Tab>
                 <Tab>Giáo dục trải nghiệm </Tab>
                 <Tab>Ẩm thực</Tab>
-                <hr className="w-full border-[#EC008C]"/>
             </TabList>
+            <hr className="border-[#EC008C] mx-5"/>
 
             <TabPanel className="px-12 pt-6">
                 <div className="flex justify-between">
@@ -103,15 +104,23 @@ function MucLuc() {
                         {list_TroChoi_CamGiacManh.map((item, key) => {
                                 const formattedIndex = `0${key + 1}`.slice(-2);
                                 return (
-                                    <div className="flex text-gray-600 text-[16px] fontNunito pt-6 normal-case">
-                                        <div className="pr-4">
-                                            <li className="text-pink-500" key={item}>
-                                                <div className="pr-4">
-                                                    {formattedIndex}
+                                    <div
+                                        className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case items-center">
+                                        <div className="relative w-8 h-8">
+                                            <div className="absolute inset-0">
+                                                <div
+                                                    className="rounded-full border-1 border-pink-500 bg-white bg-opacity-50 flex items-center h-full">
+                                                    <div className="pl-[5px]">
+                                                        <ul>
+                                                            <li className="text-pink-500" key={item}>
+                                                                {formattedIndex}
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                            </li>
+                                            </div>
                                         </div>
-                                        <div>
+                                        <div className="pl-4">
                                             <p>{item}</p>
                                         </div>
                                     </div>
@@ -122,42 +131,58 @@ function MucLuc() {
                     <ul className="fontNunito-semibold text-[25px] text-[#259E58] uppercase">
                         Tương tác ảo
                         {list_TroChoi_TuongTacAo.map((item, key) => {
-                                const formattedIndex = `0${key + 1}`.slice(-2);
-                                return (
-                                    <div className="flex text-gray-600 text-[16px] fontNunito pt-6 normal-case">
-                                        <div className="pr-4">
-                                            <li className="text-pink-500" key={item}>
-                                                <div className="pr-4">
-                                                    {formattedIndex}
+                            const formattedIndex = `0${key + 1}`.slice(-2);
+                            return (
+                                <div
+                                    className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case items-center">
+                                    <div className="relative w-8 h-8">
+                                        <div className="absolute inset-0">
+                                            <div
+                                                className="rounded-full border-1 border-pink-500 bg-white bg-opacity-50 flex items-center h-full">
+                                                <div className="pl-[5px]">
+                                                    <ul>
+                                                        <li className="text-pink-500" key={item}>
+                                                            {formattedIndex}
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                            </li>
-                                        </div>
-                                        <div>
-                                            <p>{item}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                )
+                                    <div className="pl-4">
+                                        <p>{item}</p>
+                                    </div>
+                                </div>
+                            )
                             }
                         )}
                     </ul>
                     <ul className="fontNunito-semibold text-[25px] text-[#259E58] uppercase">
                         Giải trí
                         {list_TroChoi_GiaiTri.map((item, key) => {
-                                const formattedIndex = `0${key + 1}`.slice(-2);
-                                return (
-                                    <div className="flex text-gray-600 text-[16px] fontNunito pt-6 normal-case">
-                                        <div className="pr-4">
-                                            <li className="text-pink-500" key={item}>
-                                                <div className="pr-4">
-                                                    {formattedIndex}
+                            const formattedIndex = `0${key + 1}`.slice(-2);
+                            return (
+                                <div
+                                    className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case items-center">
+                                    <div className="relative w-8 h-8">
+                                        <div className="absolute inset-0">
+                                            <div
+                                                className="rounded-full border-1 border-pink-500 bg-white bg-opacity-50 flex items-center h-full">
+                                                <div className="pl-[5px]">
+                                                    <ul>
+                                                        <li className="text-pink-500" key={item}>
+                                                            {formattedIndex}
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                            </li>
-                                        </div>
-                                        <div>
-                                            <p>{item}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                )
+                                    <div className="pl-4">
+                                        <p>{item}</p>
+                                    </div>
+                                </div>
+                            )
                             }
                         )}
                     </ul>
@@ -166,15 +191,23 @@ function MucLuc() {
                         {list_TroChoi_ThieuNhi.map((item, key) => {
                             const formattedIndex = `0${key + 1}`.slice(-2);
                             return (
-                                <div className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case">
-                                    <div className="pr-4">
-                                        <li className="text-pink-500" key={item}>
-                                            <div className=" pr-4">
-                                                {formattedIndex}
+                                <div
+                                    className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case items-center">
+                                    <div className="relative w-8 h-8">
+                                        <div className="absolute inset-0">
+                                            <div
+                                                className="rounded-full border-1 border-pink-500 bg-white bg-opacity-50 flex items-center h-full">
+                                                <div className="pl-[5px]">
+                                                    <ul>
+                                                        <li className="text-pink-500" key={item}>
+                                                            {formattedIndex}
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </li>
+                                        </div>
                                     </div>
-                                    <div>
+                                    <div className="pl-4">
                                         <p>{item}</p>
                                     </div>
                                 </div>
@@ -189,17 +222,22 @@ function MucLuc() {
                     {list_VuonThu.map((item, key) => {
                         const formattedIndex = `0${key + 1}`.slice(-2);
                         return (
-                            <div className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case">
-                                <div className="pr-4">
-                                    <ul>
-                                        <li className="text-pink-500" key={item}>
-                                            <div className=" pr-4">
-                                                {formattedIndex}
+                            <div className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case items-center">
+                                <div className="relative w-8 h-8">
+                                    <div className="absolute inset-0">
+                                        <div
+                                            className="rounded-full border-1 border-pink-500 bg-white bg-opacity-50 flex items-center h-full">
+                                            <div className="pl-[5px]">
+                                                <ul>
+                                                    <li className="text-pink-500" key={item}>
+                                                        {formattedIndex}
+                                                    </li>
+                                                </ul>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
+                                <div className="pl-4">
                                     <p>{item}</p>
                                 </div>
                             </div>
@@ -213,17 +251,22 @@ function MucLuc() {
                     {list_CanhDep.map((item, key) => {
                         const formattedIndex = `0${key + 1}`.slice(-2);
                         return (
-                            <div className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case">
-                                <div className="pr-4">
-                                    <ul>
-                                        <li className="text-pink-500" key={item}>
-                                            <div className=" pr-4">
-                                                {formattedIndex}
+                            <div className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case items-center">
+                                <div className="relative w-8 h-8">
+                                    <div className="absolute inset-0">
+                                        <div
+                                            className="rounded-full border-1 border-pink-500 bg-white bg-opacity-50 flex items-center h-full">
+                                            <div className="pl-[5px]">
+                                                <ul>
+                                                    <li className="text-pink-500" key={item}>
+                                                        {formattedIndex}
+                                                    </li>
+                                                </ul>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
+                                <div className="pl-4">
                                     <p>{item}</p>
                                 </div>
                             </div>
@@ -237,17 +280,22 @@ function MucLuc() {
                     {list_SanKhau.map((item, key) => {
                         const formattedIndex = `0${key + 1}`.slice(-2);
                         return (
-                            <div className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case">
-                                <div className="pr-4">
-                                    <ul>
-                                        <li className="text-pink-500" key={item}>
-                                            <div className=" pr-4">
-                                                {formattedIndex}
+                            <div className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case items-center">
+                                <div className="relative w-8 h-8">
+                                    <div className="absolute inset-0">
+                                        <div
+                                            className="rounded-full border-1 border-pink-500 bg-white bg-opacity-50 flex items-center h-full">
+                                            <div className="pl-[5px]">
+                                                <ul>
+                                                    <li className="text-pink-500" key={item}>
+                                                        {formattedIndex}
+                                                    </li>
+                                                </ul>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
+                                <div className="pl-4">
                                     <p>{item}</p>
                                 </div>
                             </div>
@@ -261,17 +309,22 @@ function MucLuc() {
                     {list_GiaoDucTraiNghiem.map((item, key) => {
                         const formattedIndex = `0${key + 1}`.slice(-2);
                         return (
-                            <div className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case">
-                                <div className="pr-4">
-                                    <ul>
-                                        <li className="text-pink-500" key={item}>
-                                            <div className=" pr-4">
-                                                {formattedIndex}
+                            <div className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case items-center">
+                                <div className="relative w-8 h-8">
+                                    <div className="absolute inset-0">
+                                        <div
+                                            className="rounded-full border-1 border-pink-500 bg-white bg-opacity-50 flex items-center h-full">
+                                            <div className="pl-[5px]">
+                                                <ul>
+                                                    <li className="text-pink-500" key={item}>
+                                                        {formattedIndex}
+                                                    </li>
+                                                </ul>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
+                                <div className="pl-4">
                                     <p>{item}</p>
                                 </div>
                             </div>
@@ -285,17 +338,22 @@ function MucLuc() {
                     {list_AmThuc.map((item, key) => {
                         const formattedIndex = `0${key + 1}`.slice(-2);
                         return (
-                            <div className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case">
-                                <div className="pr-4">
-                                    <ul>
-                                        <li className="text-pink-500" key={item}>
-                                            <div className=" pr-4">
-                                                {formattedIndex}
+                            <div className="flex text-gray-600 text-[16px] fontNunito mt-6 normal-case items-center">
+                                <div className="relative w-8 h-8">
+                                    <div className="absolute inset-0">
+                                        <div
+                                            className="rounded-full border-1 border-pink-500 bg-white bg-opacity-50 flex items-center h-full">
+                                            <div className="pl-[5px]">
+                                                <ul>
+                                                    <li className="text-pink-500" key={item}>
+                                                        {formattedIndex}
+                                                    </li>
+                                                </ul>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
+                                <div className="pl-4">
                                     <p>{item}</p>
                                 </div>
                             </div>
@@ -304,6 +362,7 @@ function MucLuc() {
                 </div>
             </TabPanel>
         </Tabs>
+        
     )
 }
 

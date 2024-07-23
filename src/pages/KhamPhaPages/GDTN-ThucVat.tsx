@@ -1,6 +1,29 @@
 import {FaArrowLeftLong, FaArrowRightLong} from "react-icons/fa6";
+import {collection, getDocs, DocumentData } from 'firebase/firestore';
+import {useEffect, useState} from "react";
+import {firestore} from "../../lib/firebase.ts";
 
 function GDTN_ThucVat() {
+    
+    const [data, setData] = useState<DocumentData[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const colRef = await getDocs(collection(firestore, "GDTN-ThucVat"));
+                const fetchedData: DocumentData[] = [];
+
+                colRef.forEach((doc) => {
+                    fetchedData.push(doc.data());
+                });
+                setData(fetchedData);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
+        fetchData();
+    }, []);
+  
     return (
         <section>
             <div className="bg-[#ECF3E0] justify-center p-6">
@@ -55,8 +78,11 @@ function GDTN_ThucVat() {
                             </div>
                             <div className="px-4">
                                 <p className="fontNunito text-ellipsis line-clamp-5 text-gray-500">
-                                    Là một trong những loài thực vật thuộc nhóm thực vật không có hoa và không có hạt.
-                                    Nó sinh sản thông qua bào tử và thường được tìm thấy làm cây cảnh.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.CayDuongXi}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="flex justify-between">
@@ -90,8 +116,11 @@ function GDTN_ThucVat() {
                             </div>
                             <div className="px-4">
                                 <p className="fontNunito text-ellipsis overflow-hidden text-gray-500">
-                                    Là một chi trong thực vật có hoa bản địa khu vực Nam Mỹ, từ Brasil về phía tây tới
-                                    Peru và về phía nam tới miền nam Argentina.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.CayHoaGiay}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="flex justify-between">
@@ -125,8 +154,11 @@ function GDTN_ThucVat() {
                             </div>
                             <div className="px-4">
                                 <p className="fontNunito text-ellipsis overflow-hidden text-gray-500">
-                                    Cây lim xẹt có hoa màu vàng rực rỡ trông rất đẹp mắt, mang đến cho mọi người không
-                                    gian sống vô cùng sống động.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.CayLimSet}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="flex justify-between">
@@ -198,8 +230,11 @@ function GDTN_ThucVat() {
                             </div>
                             <div className="px-4">
                                 <p className="fontNunito text-ellipsis line-clamp-4 text-gray-500">
-                                    Rau má có tên gọi khác là tích tuyết thảo hay liên tiền thảo thường mọc ở những nơi
-                                    ẩm ướt, râm mát, thung lũng, bờ mương, đất mùn tơi xốp tại các vùng nhiệt đới
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.RauMaThai}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="flex justify-between">
@@ -233,8 +268,11 @@ function GDTN_ThucVat() {
                             </div>
                             <div className="px-4">
                                 <p className="fontNunito text-ellipsis line-clamp-4 text-gray-500">
-                                    Cây rẻ quạt là một dược liệu Đông y quý, có vị đắng, tính hàn vào kinh Can và Phế
-                                    giúp thanh hoả, giải độc, hành huyết, tiêu đờm.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.CayReQuat}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="flex justify-between">
@@ -268,8 +306,11 @@ function GDTN_ThucVat() {
                             </div>
                             <div className="px-4">
                                 <p className="fontNunito text-ellipsis overflow-hidden text-gray-500">
-                                    Là loại cây mang lại giá trị kinh tế cao do năng suất dầu cao hơn những loại cây có
-                                    dầu khác.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.CayCoDau}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="flex justify-between">
@@ -303,8 +344,11 @@ function GDTN_ThucVat() {
                             </div>
                             <div className="px-4">
                                 <p className="fontNunito text-ellipsis overflow-hidden text-gray-500">
-                                    Là một loài thực vật thủy sinh, thân thảo, sống nổi theo dòng nước, thuộc về chi
-                                    Pontederia của Họ Bèo tây.
+                                    {data.map((item, index) => (
+                                        <div key={index}>
+                                            {item.BeoTay}
+                                        </div>
+                                    ))}
                                 </p>
                             </div>
                             <div className="flex justify-between">
