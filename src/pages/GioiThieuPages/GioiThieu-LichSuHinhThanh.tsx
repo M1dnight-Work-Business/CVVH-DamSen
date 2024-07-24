@@ -114,6 +114,7 @@ function GioiThieuLichSuHinhThanh() {
                                 <h2 className="pt-6 text-center fontBanger text-[#259E58] text-4xl">
                                     Trò chơi
                                 </h2>
+                                <hr className="border-b-3 mx-auto w-[50px] pt-3 border-t-0 border-[#259E58]"/>
                                 <p className="text-center text-gray-600 fontNunito text-[14px] pt-7">
                                     {data.map((item, index) => (
                                         <div key={index}>
@@ -127,6 +128,7 @@ function GioiThieuLichSuHinhThanh() {
                                 <h2 className="pt-6 text-center fontBanger text-[#4293FA] text-4xl">
                                     Sự kiện
                                 </h2>
+                                <hr className="border-b-3 mx-auto w-[50px] pt-3 border-t-0 border-[#4293FA]"/>
                                 <p className="text-center text-gray-600 fontNunito text-[14px] pt-7">
                                     {data.map((item, index) => (
                                         <div key={index}>
@@ -140,6 +142,7 @@ function GioiThieuLichSuHinhThanh() {
                                 <h2 className="pt-6 text-center fontBanger text-[#E931C3] text-4xl">
                                     Cảnh trí
                                 </h2>
+                                <hr className="border-b-3 mx-auto w-[50px] pt-3 border-t-0 border-[#E931C3]"/>
                                 <p className="text-center text-gray-600 fontNunito text-[14px] pt-7">
                                     {data.map((item, index) => (
                                         <div key={index}>
@@ -155,6 +158,7 @@ function GioiThieuLichSuHinhThanh() {
                                 <h2 className="pt-6 text-center fontBanger text-[#FFA034] text-4xl">
                                     Chim thú
                                 </h2>
+                                <hr className="border-b-3 mx-auto w-[50px] pt-3 border-t-0 border-[#FFA034]"/>
                                 <p className="text-center text-gray-600 fontNunito text-[14px] pt-7">
                                     {data.map((item, index) => (
                                         <div key={index}>
@@ -168,6 +172,7 @@ function GioiThieuLichSuHinhThanh() {
                                 <h2 className="pt-6 text-center fontBanger text-[#31C996] text-4xl">
                                     Ẩm thực
                                 </h2>
+                                <hr className="border-b-3 mx-auto w-[50px] pt-3 border-t-0 border-[#31C996]"/>
                                 <p className="text-center text-gray-600 fontNunito text-[14px] pt-7">
                                     {data.map((item, index) => (
                                         <div key={index}>
