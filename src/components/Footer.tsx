@@ -1,13 +1,13 @@
 function Footer() {
     return (
-        <footer className=" h-fit bg-[#259E58] text-white">
-            <div className="px-20 py-6">
+        <footer>
+            <div className="py-6 px-5 w-full bg-[#259E58] text-white">
                 <div className="flex justify-between">
                     <div className="text-white fontBanger">
                         Trực thuộc
                         <img className="w-56 pt-[30px] " src="src/assets/svg/logo-footer.svg" alt=""/>
                     </div>
-                    <div className="text-white fontBanger flex-col">
+                    <div className="text-white fontBanger">
                         Liên hệ
                         <div className="pt-4 space-y-2">
                             <div className="flex">
@@ -41,7 +41,7 @@ function Footer() {
                             </ul>
                         </div>
                     </div>
-                    <div className="text-white fontBanger ">
+                    <div className="text-white fontBanger">
                         Các đơn vị cùng hệ thống tourist
                         <ul className="pl-4 py-2 list-disc fontNunito space-y-2">
                             <li>Công ty CP DVDL Phú Thọ</li>
@@ -53,11 +53,12 @@ function Footer() {
                         </ul>
                     </div>
                 </div>
+                <hr className="mt-8 w-full"/>
+                <div className="text-center fontNunito px-4 py-4">
+                    Copyright © Công ty Cổ phần Dịch vụ Du lịch Phú Thọ (Phuthotourist)
+                </div>
             </div>
-            <hr className="w-screen"/>
-            <div className="text-center fontNunito px-4 py-4">
-                Copyright © Công ty Cổ phần Dịch vụ Du lịch Phú Thọ (Phuthotourist)
-            </div>
+
         </footer>
     )
 }

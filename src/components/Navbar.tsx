@@ -1,7 +1,7 @@
 import {NavLink} from "react-router-dom";
 import {RiArrowRightSLine} from "react-icons/ri";
 import {ArrowContainer, Popover} from 'react-tiny-popover'
-import {useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 import 'react-tabs/style/react-tabs.css';
 import 'react-tabs/style/react-tabs.css';
 
@@ -49,7 +49,6 @@ function Navbar() {
                             positions={['right']}
                             padding={10}
                             onClickOutside={() => setIsPopoverOpen_GioiThieu(false)}
-                            ref={clickMeButtonRef} // if you'd like a ref to your popover's child, you can grab one here
                             content={({ position, childRect, popoverRect }) => (
                                 <ArrowContainer // if you'd like an arrow, you can import the ArrowContainer!
                                     position={position}
@@ -61,19 +60,19 @@ function Navbar() {
                                     arrowColor={'none'}
                                     arrowSize={0}>
 
-                                    <div className="p-3 hover:bg-gray-200 rounded-md transition-colors cursor-pointer" 
+                                    <div className="p-3 hover:bg-gray-200 rounded-sm transition-colors cursor-pointer" 
                                         style={{opacity: 0.7}}
                                          onClick={() => setIsPopoverOpen_GioiThieu(!isPopoverOpen_GioiThieu)}>
                                         <NavLink to='/gioi-thieu-lich-su-hinh-thanh'>Lịch sử hình thành</NavLink>
                                     </div>
                                     <hr/>
-                                    <div className="p-3 hover:bg-gray-200 rounded-md transition-colors cursor-pointer"
+                                    <div className="p-3 hover:bg-gray-200 rounded-sm transition-colors cursor-pointer"
                                          style={{opacity: 0.7}}
                                          onClick={() => setIsPopoverOpen_GioiThieu(!isPopoverOpen_GioiThieu)}>
                                         <NavLink to='/gioi-thieu-thanh-vien'>Thành viên</NavLink>
                                     </div >
                                     <hr/>
-                                    <div className="p-3 hover:bg-gray-200 rounded-md transition-colors cursor-pointer"
+                                    <div className="p-3 hover:bg-gray-200 rounded-sm transition-colors cursor-pointer"
                                          style={{opacity: 0.7}}
                                          onClick={() => setIsPopoverOpen_GioiThieu(!isPopoverOpen_GioiThieu)}>
                                         <NavLink to='/gioi-thieu-chinh-sach-bao-mat'>Chính sách bảo mật</NavLink>
@@ -93,7 +92,6 @@ function Navbar() {
                             positions={['right']}
                             padding={10}
                             onClickOutside={() => setIsPopoverOpen_GiaVe(false)}
-                            ref={clickMeButtonRef} // if you'd like a ref to your popover's child, you can grab one here
                             content={({ position, childRect, popoverRect }) => (
                                 <ArrowContainer // if you'd like an arrow, you can import the ArrowContainer!
                                     position={position}
@@ -105,25 +103,25 @@ function Navbar() {
                                     arrowColor={'none'} 
                                     arrowSize={0}>
 
-                                    <div className="p-3 hover:bg-gray-200 rounded-md transition-colors cursor-pointer"
+                                    <div className="p-3 hover:bg-gray-200 rounded-sm transition-colors cursor-pointer"
                                          style={{opacity: 0.7}}
                                          onClick={() => setIsPopoverOpen_GiaVe(!isPopoverOpen_GiaVe)}>
                                         <NavLink to='/gia-ve-trong-cong-vien'>Vé trong công viên</NavLink>
                                     </div>
                                     <hr/>
-                                    <div className="p-3 hover:bg-gray-200 rounded-md transition-colors cursor-pointer"
+                                    <div className="p-3 hover:bg-gray-200 rounded-sm transition-colors cursor-pointer"
                                          style={{opacity: 0.7}}
                                          onClick={() => setIsPopoverOpen_GiaVe(!isPopoverOpen_GiaVe)}>
                                         <NavLink to='/gia-ve-dich-vu'>Vé dịch vụ</NavLink>
                                     </div>
                                     <hr/>
-                                    <div className="p-3 hover:bg-gray-200 rounded-md transition-colors cursor-pointer"
+                                    <div className="p-3 hover:bg-gray-200 rounded-sm transition-colors cursor-pointer"
                                          style={{opacity: 0.7}}
                                          onClick={() => setIsPopoverOpen_GiaVe(!isPopoverOpen_GiaVe)}>
                                         <NavLink to='/gia-ve-tap-the'>Vé tập thể</NavLink>
                                     </div>
                                     <hr/>
-                                    <div className="p-3 hover:bg-gray-200 rounded-md transition-colors cursor-pointer"
+                                    <div className="p-3 hover:bg-gray-200 rounded-sm transition-colors cursor-pointer"
                                          style={{opacity: 0.7}}
                                          onClick={() => setIsPopoverOpen_GiaVe(!isPopoverOpen_GiaVe)}>
                                         <NavLink to='/gia-ve-tap-the-duc'>Vé tập thể dục</NavLink>
@@ -140,7 +138,7 @@ function Navbar() {
                     </li>
                 </ul>
 
-                <div className="flex flex-col pb-5 gap-5">
+                <div className="flex flex-col pb-9 gap-5">
                     <img src="src/assets/svg/DamSen.svg" alt="dam_sen"/>
                     <hr/>
                     <div className="flex flex-row justify-center gap-4">
